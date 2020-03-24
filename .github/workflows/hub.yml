@@ -1,0 +1,21 @@
+---
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "README.md"
+name: Docker Hub
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: snyk/snyk-container-demo
+          tags: latest
+          tag_with_sha: true
+          add_git_labels: true
