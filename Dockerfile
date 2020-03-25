@@ -4,9 +4,9 @@ COPY package*.json ./
 
 RUN npm ci --only=production
 
-RUN apt-get update && apt-get install -y cowsay
-
-RUN apt-get update && apt-get install -y sqlite3
+RUN apt-get update && apt-get install -y \
+    sqlite \
+ && rm -rf /var/lib/apt/lists/*
 
 COPY . .
 
