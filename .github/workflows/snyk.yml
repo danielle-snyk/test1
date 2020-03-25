@@ -1,0 +1,25 @@
+---
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "README.md"
+name: Snyk
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build image
+        env:
+          DOCKER_BUILDKIT: 1
+        run: docker build --pull -t snyk-container-demo .
+      - name: Run Snyk to check Docker image for vulnerabilities
+        uses: snyk/actions/docker@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          image: snyk-container-demo
+          args: --file=Dockerfile --project-name="docker.io/snyk/snyk-container-demo"
+          command: monitor
