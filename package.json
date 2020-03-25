@@ -12,10 +12,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "subtext": "^6.0.12",
+    "http_server": "1.0.11",
     "st": "0.2.4",
-    "npmconf": "2.1.2,
-    "adm-zip": "0.4.10",
-    "http_server": "1.0.11"
+    "adm-zip": "0.4.10"
   },
   "devDependencies": {
     "jest": "^25.1.0",
