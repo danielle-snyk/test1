@@ -19,6 +19,12 @@ integrations that best fit your workflow.
 
 ![Snyk projects](assets/snyk.png)
 
+When exploring the image vulnerabilities (the ones of the operating system, as well as the ones of the application of the container image), we can see that you can easily find the most critical issues and address them with priority. 
+Here we can see the upgrade advice offered by Snyk, followed by a view of the application vulnerabilitiies, their status and their exploit maturity. You can, of course, filter by the parameters that interest you the most. 
+
+![Remidiation advice](assets/remidiation.png)
+
+![Exploit maturity](assets/exploit-maturity.png)
 
 ## Base image recommendations
 
