@@ -5,6 +5,10 @@ on:
       - master
     paths-ignore:
       - "README.md"
+  schedule:
+    # As well as running when we make changes we should run at least
+    # every week in order to pick up new base images
+    - cron:  "0 0 * * 0"
 name: Docker Hub
 jobs:
   publish:
