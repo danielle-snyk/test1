@@ -11,7 +11,7 @@ ifndef DOCKER_BUILDKIT
 endif
 
 build: check-buildkit
-	docker build -t $(IMAGE) .
+	docker build --pull -t $(IMAGE) .
 
 
 .PHONY: check-buildkit all build test
