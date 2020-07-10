@@ -41,7 +41,7 @@ The simplest way of using Snyk is with out CLI. The basic usage of that is simpl
 output information about it's vulnerabilties.
 
 ```console
-$ snyk test --docker daniellesnyk/snyk-container-demo --file=Dockerfile
+$ snyk container test daniellesnyk/snyk-container-demo --file=Dockerfile
 Testing daniellesnyk/snyk-container-demo:latest...
 
 ...
