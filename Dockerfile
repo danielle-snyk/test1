@@ -1,4 +1,4 @@
-FROM node:15.5-slim
+FROM node:15.14-slim
 
 COPY package*.json ./
 
